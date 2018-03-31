@@ -9,11 +9,21 @@
 </template>
 
 <script>
+  import { test } from '../components/axios/api';
   export default {
     data() {
       return {
         visible: false
       }
+    },
+    created() {
+      test('18434364576')
+        .then(response => {
+          console.log(response, '请求成功');
+        })
+        .catch(error => {
+          console.log(error, '请求失败');
+        })
     }
   }
 </script>
