@@ -3,6 +3,13 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Hello from '@/components/Hello'
 import Login from '@/components/Login'
+import Home from '@/components/student/Home'
+import Information from '@/components/student/PersonalInformation'
+import SelectedExperiment from '@/components/student/SelectedExperiment'
+import Announcement from '@/components/Announcement'
+import THome from '@/components/teacher/Home'
+import TInformation from '@/components/teacher/PersonalInformation'
+import TSelectedExperiment from '@/components/teacher/SelectedExperiment'
 
 Vue.use(Router)
 
@@ -22,6 +29,41 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/information',
+      name: 'Information',
+      component: Information
+    },
+    {
+      path: '/selected',
+      name: 'SelectedExperiment',
+      component: SelectedExperiment
+    },
+    {
+      path: '/announcement',
+      name: 'Announcement',
+      component: Announcement
+    },
+    {
+      path: '/t_home',
+      name: 'THome',
+      component: THome
+    },
+    {
+      path: '/t_information',
+      name: 'TInformation',
+      component: TInformation
+    },
+    {
+      path: '/t_selectedExperiment',
+      name: 'TSelectedExperiment',
+      component: TSelectedExperiment
     }
   ]
 })

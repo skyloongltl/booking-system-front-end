@@ -7,16 +7,27 @@
         <el-form :label-position="right" label-width="100px">
 
           <el-form-item label="用户名">
-            <el-input></el-input>
+            <el-input
+              placeholder="请输入学号或职工号"></el-input>
           </el-form-item>
 
           <el-form-item label="密码">
-            <el-input></el-input>
+            <el-input
+              placeholder="请输入密码"></el-input>
+          </el-form-item>
+          <el-form-item label="验证码">
+            <el-col :xs="10" :lg="10" :xl="7">
+              <el-input
+                placeholder="验证码"></el-input>
+            </el-col>
+            <el-col :xs="14" :lg="10" :xl="7">
+              <img style="height: 40px" src="http://202.207.177.24/aexp/ValidateImage?t=0.43446734709949575" alt="验证码"/>
+            </el-col>
           </el-form-item>
 
           <el-form-item>
-            <el-radio v-model="radio" label="1">备选项</el-radio>
-            <el-radio v-model="radio" label="2">备选项</el-radio>
+            <el-radio v-model="radio" label="1">学生</el-radio>
+            <el-radio v-model="radio" label="2">教师</el-radio>
           </el-form-item>
 
           <el-form-item>
@@ -51,7 +62,7 @@
       };
     },
     methods: {
-      onSubmit () {
+      onSubmit: function () {
         console.log('submit');
       }
     }
@@ -59,6 +70,6 @@
   }
 </script>
 
-<style>
+<style scoped>
 
 </style>
