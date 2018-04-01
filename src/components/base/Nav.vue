@@ -82,6 +82,7 @@
             't_selected'
           ],
           common: 'announcement'
+          //TODO 如果公告共用一个模板，要怎么分是学生还是教师
         },
       };
     },
