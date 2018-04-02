@@ -5,7 +5,7 @@
                text-color="#fff"
                active-text-color="#ffd04b"
                mode="horizontal"
-               router="true">
+               :router="true">
         <el-col class="hidden-xs-only" :sm="4" :md="2" :lg="2">&nbsp;</el-col>
 
         <el-col :class="{ ex_active: isActive_1}" :xs="4" :sm="2" :md="2" :lg="2" :xl="1">
@@ -36,7 +36,7 @@
         </el-col>
 
         <el-col :class="{ ex_active: isActive_4 }" :xs="4" :sm="2" :md="2" :lg="2" :xl="1">
-          <el-menu-item :route="route.student[3]" index="4">公告</el-menu-item>
+          <el-menu-item :route="route.common" index="4">公告</el-menu-item>
         </el-col>
       </el-menu>
   </div>
@@ -72,17 +72,16 @@
         isActive_4: false,
         route: {
           student: [
-            'home',
-            'information',
-            'selected'
+            '/home',
+            '/information',
+            '/selected'
           ],
           teacher: [
-            't_home',
-            't_information',
-            't_selected'
+            '/t_home',
+            '/t_information',
+            '/t_selected'
           ],
-          common: 'announcement'
-          //TODO 如果公告共用一个模板，要怎么分是学生还是教师
+          common: '/announcement/' + this.user
         },
       };
     },

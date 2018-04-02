@@ -10,6 +10,7 @@ import Announcement from '@/components/Announcement'
 import THome from '@/components/teacher/Home'
 import TInformation from '@/components/teacher/PersonalInformation'
 import TSelectedExperiment from '@/components/teacher/SelectedExperiment'
+import AdminHome from '@/components/admin/Home'
 
 Vue.use(Router)
 
@@ -46,7 +47,7 @@ export default new Router({
       component: SelectedExperiment
     },
     {
-      path: '/announcement',
+      path: '/announcement/:type',
       name: 'Announcement',
       component: Announcement
     },
@@ -61,9 +62,14 @@ export default new Router({
       component: TInformation
     },
     {
-      path: '/t_selectedExperiment',
+      path: '/t_selected',
       name: 'TSelectedExperiment',
       component: TSelectedExperiment
+    },
+    {
+      path: '/admin/home',
+      name: 'AdminHome',
+      component: AdminHome
     }
   ]
 })

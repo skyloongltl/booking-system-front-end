@@ -2,7 +2,7 @@
   <div>
     <el-container>
       <el-header>
-        <Nav :currentIndex="index"></Nav>
+        <Nav :currentIndex="index" :user="type"></Nav>
       </el-header>
       <el-main>
         <el-collapse accordion>
@@ -38,6 +38,7 @@
     data () {
       return {
         index: '4',
+        type: null,
         announcements: [{
           id: '1',
           title: '三月三实验选择公告',
@@ -69,6 +70,18 @@
           '喜提爱车，微信新男性，左手事业，右手家庭。他热情大方、青春洋溢，买部高级车，就是为了让乐观家族的成员们' +
           '都能有车坐！'
         },]
+      }
+    },
+    created () {
+        this.whatType()
+    },
+    methods: {
+      whatType: function () {
+        if(this.$route.params.type === 'teacher'){
+          this.type = 'teacher'
+        } else if(this.$route.params.type = 'student') {
+          this.type = 'student'
+        }
       }
     }
   }
